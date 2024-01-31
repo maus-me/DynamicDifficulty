@@ -1,0 +1,81 @@
+main: me.skinnyjeans.gmd.Main
+name: DynamicDifficulty
+version: 1.8
+author: SkinnyJeans
+api-version: 1.13
+softdepend: ["PlaceholderAPI", "MythicMobs"]
+
+permissions:
+  affinity.*:
+    default: op
+    children:
+      affinity.me: true
+      affinity.info: true
+      affinity.help: true
+      affinity.get: true
+      affinity.author: true
+      affinity.add: true
+      affinity.remove: true
+      affinity.set: true
+      affinity.setmax: true
+      affinity.delmax: true
+      affinity.setmin: true
+      affinity.delmin: true
+      affinity.reload: true
+      affinity.forcesave: true
+      affinity.playergui: true
+      affinity.difficulties: true
+
+  affinity.me:
+    default: false
+    description: Opens the difficulty settings for a player
+  affinity.info:
+    default: false
+    description: Returns some info from items in the plugin
+  affinity.help:
+    default: false
+    description: Returns all the commands of Dynamic Difficulty to the player
+  affinity.get:
+    default: false
+    description: Allows a player to look up a someones affinity
+  affinity.author:
+    default: false
+    description: Returns the authors name
+  affinity.set:
+    default: op
+    description: Allows a player to set
+  affinity.remove:
+    default: op
+    description: Allows a player to remove a certain amount of affinity to someone
+  affinity.add:
+    default: op
+    description: Allows a player to add a certain amount of affinity to someone
+  affinity.setmax:
+    default: op
+    description: Allows a player to set a max affinity for someone
+  affinity.delmax:
+    default: op
+    description: Allows a player to remove a max affinity for someone
+  affinity.setmin:
+    default: op
+    description: Allows a player to set a min affinity for someone
+  affinity.delmin:
+    default: op
+    description: Allows a player to remove a min affinity for someone
+  affinity.reload:
+    default: op
+    description: Allows a player to reload the config
+  affinity.forcesave:
+    default: op
+    description: Saves the player data
+  affinity.playergui:
+    default: op
+    description: allows you to change the settings of players in chest form
+  affinity.difficulties:
+    default: op
+    description: allows you to see all the difficulties
+
+commands:
+  affinity:
+    aliases: [af, dd, dynamicdifficulty]
+    description: Settings to change the Affinity of users

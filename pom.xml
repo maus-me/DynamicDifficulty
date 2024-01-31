@@ -30,52 +30,9 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>16</source>
+                    <source>17</source>
                     <target>8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.github.wvengen</groupId>
-                <artifactId>proguard-maven-plugin</artifactId>
-                <version>2.4.0</version>
-                <executions>
-                    <execution>
-                        <id>proguard</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>proguard</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <obfuscate>false</obfuscate>
-                    <options>
-                        <option>-allowaccessmodification</option>
-                        <option>-keep class !me.skinnyjeans.gmd.Main</option>
-                        <option>-dontwarn javax.annotation.**</option>
-                        <option>-optimizations !code/allocation/variable</option>
-                        <option>-keep public class * { *; }</option>
-                        <option>-ignorewarnings</option>
-                    </options>
-                    <libs>
-<!--                        <lib>${java.home}/lib/rt.jar</lib>-->
-                        <lib>C:\Program Files\Java\jre1.8.0_341/lib/rt.jar</lib>
-                    </libs>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.mongodb</groupId>
-                        <artifactId>mongo-java-driver</artifactId>
-                        <version>2.13.3</version>
-                        <scope>compile</scope>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.postgresql</groupId>
-                        <artifactId>postgresql</artifactId>
-                        <version>42.2.20</version>
-                        <scope>compile</scope>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
